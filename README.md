@@ -86,9 +86,23 @@ This project uses CI-gated evaluation to ensure the AI's diagnostic accuracy mee
 
 *(Run tests locally with `pytest tests/ -v`)*
 
+## Dashboard Screenshots
 
+Here are screenshots of the autonomous incident dashboard interfaces:
 
+### 1. Main Dashboard (Real-time Service Health & Anomaly Feed)
+![Main Dashboard](docs/screenshots/dashboard_home.png)
 
-## By Swarnadipta Das
+### 2. Incident History (Searchable logs & audit trails)
+![Incident History](docs/screenshots/dashboard_history.png)
+
+### 3. AI Incident Agent Analysis (Root Cause Hypotheses, Supporting Evidence & Action Execution)
+![Incident Investigation Details](docs/screenshots/dashboard_incident.png)
+
+## Demo Video
+
+[Watch the 3-minute demo walkthrough here](#) *(Anomaly triggering → AI Analysis → Root Cause display → 1-click Resolution → Postmortem)*
+
+## - By Swarnadipta Das
 
 B.Tech | CSE(AI & ML) 
