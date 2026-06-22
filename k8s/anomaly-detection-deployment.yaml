@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anomaly-detection
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: anomaly-detection
+  template:
+    metadata:
+      labels:
+        app: anomaly-detection
+    spec:
+      containers:
+      - name: anomaly-detection
+        image: incident-engineer/anomaly-detection:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8002
+        envFrom:
+        - secretRef:
+            name: incident-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: anomaly-detection
+spec:
+  selector:
+    app: anomaly-detection
+  ports:
+  - port: 8002
+    targetPort: 8002

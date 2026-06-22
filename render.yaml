@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: autonomous-incident-engineer
+    env: docker
+    dockerfilePath: Dockerfile.render
+    plan: free
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false

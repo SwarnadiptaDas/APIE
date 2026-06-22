@@ -1,0 +1,48 @@
+# Environment variables - NEVER commit this file
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+venv/
+.venv/
+env/
+.venv
+
+# Local databases (generated at runtime)
+*.db
+*.sqlite
+*.sqlite3
+local_data.db
+local_chroma_db/
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/build/
+.npm
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Render / Docker build artifacts
+*.pyc

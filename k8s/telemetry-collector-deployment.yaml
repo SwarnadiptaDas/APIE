@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telemetry-collector
+  labels:
+    app: telemetry-collector
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: telemetry-collector
+  template:
+    metadata:
+      labels:
+        app: telemetry-collector
+    spec:
+      containers:
+      - name: telemetry-collector
+        image: incident-engineer/telemetry-collector:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 4317
+        - containerPort: 4318
+        - containerPort: 8001
+        envFrom:
+        - secretRef:
+            name: incident-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: telemetry-collector
+spec:
+  selector:
+    app: telemetry-collector
+  ports:
+  - port: 8001
+    targetPort: 8001
+    name: http
+  - port: 4317
+    targetPort: 4317
+    name: grpc
