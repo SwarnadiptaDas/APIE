@@ -86,6 +86,9 @@ This project uses CI-gated evaluation to ensure the AI's diagnostic accuracy mee
 
 *(Run tests locally with `pytest tests/ -v`)*
 
-## Demo Video
 
-[Watch the 3-minute demo walkthrough here](#) *(Anomaly triggering → AI Analysis → Root Cause display → 1-click Resolution → Postmortem)*
+
+
+## By Swarnadipta Das
+
+B.Tech | CSE(AI & ML) 
